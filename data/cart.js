@@ -1,4 +1,9 @@
-export let cart = JSON.parse(localStorage.getItem('cart'));//localstorage gives only the string type but JSON gives the array
+export let cart;
+
+loadFromStoage();
+
+export function loadFromStoage(){
+cart = JSON.parse(localStorage.getItem('cart'));//localstorage gives only the string type but JSON gives the array
 
 if (!cart) {//gives the default value
   cart = [{
@@ -10,6 +15,7 @@ if (!cart) {//gives the default value
     quantity: 1,
     deliveryOptionId: '2'
   }];
+}
 }
 
 function saveToStorage() {
