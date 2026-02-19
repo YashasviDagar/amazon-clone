@@ -1,6 +1,6 @@
 class Cart {
     cartItems;
-    #localStorageKey;
+    #localStorageKey;//this # makes it private property which can be used inside this class only
     //here we can also define as "cartItems=undefined;" where as in oop folder we did "cartItems: undefined,"
     constructor(localStorageKey) {
         this.#localStorageKey = localStorageKey;
