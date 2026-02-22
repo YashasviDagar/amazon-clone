@@ -1,4 +1,4 @@
-import { addToCart, cart, loadFromStoage, updateDeliveryOption } from '../../data/cart.js';
+import { addToCart, cart, loadFromStorage, updateDeliveryOption } from '../../data/cart.js';
 
 describe('test suite: addToCart', () => {
     it('add an existing product to the cart', () => {
@@ -11,7 +11,7 @@ describe('test suite: addToCart', () => {
                 deliveryOptionId: '1',
         }]);
         });
-        loadFromStoage();
+        loadFromStorage();
 
         addToCart('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
         expect(cart.length).toEqual(1);
@@ -28,7 +28,7 @@ describe('test suite: addToCart', () => {
             return JSON.stringify([]);
         });//two parameters first is object and other is method
         
-        loadFromStoage();
+        loadFromStorage();
 
         addToCart('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
         expect(cart.length).toEqual(1);
