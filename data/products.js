@@ -103,7 +103,7 @@ export function loadProductsFetch() {
     });
 
     console.log('load products');
-  }).catch((error) => {
+  }).catch((error) => {//this error contains the info which is needed
     console.log('Unexpected error. Please try again later.');
   });
 

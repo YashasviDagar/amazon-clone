@@ -5,13 +5,13 @@ import {loadCart} from '../data/cart.js';
 // import '../data/cart-class.js';
 // import '../data/backend-practice.js';
 
-async function loadPage() {
+async function loadPage() {//async makes a function return a promise
   try {
     // throw 'error1';
 
-    await loadProductsFetch();
+    await loadProductsFetch();//let's us write asynchronous code in a normal way
 
-    const value = await new Promise((resolve, reject) => {
+    const value = await new Promise((resolve, reject) => {//reject is a function which helps to create an error in the future
       // throw 'error2';
       loadCart(() => {
         // reject('error3');
